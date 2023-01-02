@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <div class="date">
+    <h2>
+      <span>{{ month }} </span>
+      <span>{{ date }}</span
+      >,
+      <span> {{ year }}</span>
+    </h2>
+    <h3>{{ day }}</h3>
+  </div>
+  <form class="form-inline texbox">
+    <input
+      class="form-control mr-sm-2 textSearch"
+      type="search"
+      name="Add"
+      [(ngModel)]="task"
+    />
+    <button
+      class="btn btn-primary submitButton"
+      type="submit"
+      (click)="addTodo(task)"
+    >
+      Add
+    </button>
+  </form>
+ 
+ <div class="row todoList">
+  <ul class="list-group list" *ngFor="let task of todoList; let i = index">
+    <li class="list-group-item" [ngClass]="{'completed':task.completed}">
+      <input class="checkBoxInput" type="checkbox" (click)="taskCompleted(i)" />{{ task.taskName }}
+      <i class="fa-solid fa-square-xmark deleteIcon" (click)="remove(i)" ></i>
+    </li>
+  </ul>
+ </div>
+  

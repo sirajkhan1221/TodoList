@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 5px solid skyblue;
+  box-shadow: rgb(36 48 62) 0px 20px 30px -10px;
+  flex-wrap: wrap;
+  width: 500px;
+  margin-top: 35px;
+}
+
+
+.texbox {
+  display: flex;
+  margin: 10px;
+}
+
+h1 {
+  color: #253dd7;
+  margin-top: 20px;
+}
+
+h2,
+h3 {
+  color: #253dd7;
+}
+
+.submitButton {
+  color: #f7f7f7;
+  background-color: #253dd7;
+}
+
+.todoList {
+  text-align: left;
+  display: flex;
+  padding: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.checkBoxInput {
+  margin-right: 10px;
+}
+
+.deleteIcon {
+  color: red;
+  float: right;
+
+}
+
+.close :hover {
+  display: inline;
+}
